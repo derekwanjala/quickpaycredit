@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+        <!-- Breadcrumbs Start -->
+        <div class="rs-breadcrumbs img1">
+            <div class="container">
+                <div class="breadcrumbs-inner">
+                    <h1 class="page-title">
+                        We strengthen organizations
+                        <span class="watermark">About</span>
+                    </h1>
+                    <span class="sub-text">Excepteur sint occaecat cupidatat non proident, sunt in coulpa qui official
+                        modeserunt mollit anim id est laborum 20 years experience.</span>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumbs End -->
+
+        <!-- About Section Start -->
+        <div class="rs-about style2 pt-100 pb-100 md-pt-70 md-pb-70">
+            <div class="container">
+                <div class="row">
+                    {% for rs in about %}
+                    <div class="col-lg-6 pr-33 md-pr-15 md-mb-50">
+                        <div class="images-part">
+                            <img src="{{ rs.image.url }}" alt="{{ rs.alt }}">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <div class="sec-title">
+                            <h2 class="title pb-22">{{ rs.title }}</h2>
+                            <span class="sub-text big">{{ rs.detail | safe }}</span>
+                           
+                            <div class="btn-part mt-45 md-mt-30">
+                                <a class="readon consultant discover" href="{% url 'contact' %}">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="rs-animation">
+                <div class="animate-style">
+                    <img class="scale" src="{% static 'assets/images/about/tri-circle-1.png' %}" alt="About Yellow Tri-Circle">
+                </div>
+            </div>
+        </div>
+        <!-- About Section End -->
+
+        <!-- Services Section Start -->
+        <div id="rs-services" class="rs-services chooseus-style about-style bg12 pt-100 pb-100 md-pt-70 md-pb-70">
+            <div class="container">
+                <div class="row">
+                    {% for rs in vision %}
+                    <div class="col-lg-4 col-md-6 md-mb-30">
+                        <div class="services-item">
+                            <div class="services-icon">
+                                <img src="{{ rs.image.url }}" alt="{{ rs.alt }}">
+                            </div>
+                            <div class="services-text">
+                                <h3 class="title"><a href="#">{{ rs.title }}</a></h3>
+                                <p class="services-txt">{{ rs.short_detail }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Services Section End -->
+
+
+{% endblock %}

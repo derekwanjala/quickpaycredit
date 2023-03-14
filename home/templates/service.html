@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+        <!-- Breadcrumbs Start -->
+        <div class="rs-breadcrumbs img6">
+            <div class="container">
+                <div class="breadcrumbs-inner">
+                    <h1 class="page-title">
+                        Quick Pay Loans
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumbs End -->
+
+        <!-- Services Section Start -->
+        <div class="rs-services style2 rs-services-style2 gray-bg pt-100 pb-100 md-pt-70 md-pb-70">
+            <div class="container custom">
+                <div class="row">
+                    {% for rs in services %}
+                    <div class="col-lg-4 col-md-6 mb-20">
+                        <div class="service-wrap">
+                            <div class="image-part">
+                                <img src="{{ rs.image.url }}" alt="{{ rs.alt }}">
+                            </div>
+                            <div class="content-part">
+                                <h3 class="title"><a href="{{ rs.get_absolute_url }}">{{ rs.title }}</a></h3>
+                                <div class="desc">{{ rs.short_detail }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Services Section End -->
+
+        <!-- Process Section Start -->
+        <div class="rs-process style1 bg2 pt-100 pb-100 md-pt-70 md-pb-80">
+            <div class="container custom">
+                <div class="row y-middle">
+                    <div class="col-lg-7">
+                        <div class="sec-title md-text-center mb-30">
+                            <h2 class="title title2 white-color">
+                                Our working process - how we work for our customers
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="btn-part text-right md-text-center">
+                            <a class="readon consultant discover" href="portfolio.html">Get In Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container custom2">
+                <div class="process-effects-layer">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 md-mb-30">
+                            <div class="rs-addon-number">
+                                <div class="number-part">
+                                    <div class="number-image">
+                                        <img src="{% static 'assets/images/process/style1/1.png' %}" alt="Process">
+                                    </div>
+                                    <div class="number-text">
+                                        <div class="number-area"> <span class="number-prefix"> 1 </span></div>
+                                        <div class="number-title">
+                                            <h3 class="title"> Discovery</h3>
+                                        </div>
+                                        <div class="number-txt">
+                                            Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
+                                            in porttitor.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 md-mb-30">
+                            <div class="rs-addon-number">
+                                <div class="number-part">
+                                    <div class="number-image">
+                                        <img src="{% static 'assets/images/process/style1/2.png' %}" alt="Process">
+                                    </div>
+                                    <div class="number-text">
+                                        <div class="number-area"> <span class="number-prefix"> 2 </span></div>
+                                        <div class="number-title">
+                                            <h3 class="title">Planning</h3>
+                                        </div>
+                                        <div class="number-txt">
+                                            Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
+                                            in porttitor.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 sm-mb-30">
+                            <div class="rs-addon-number">
+                                <div class="number-part">
+                                    <div class="number-image">
+                                        <img src="{% static 'assets/images/process/style1/3.png' %}" alt="Process">
+                                    </div>
+                                    <div class="number-text">
+                                        <div class="number-area"> <span class="number-prefix"> 3 </span></div>
+                                        <div class="number-title">
+                                            <h3 class="title">Execute</h3>
+                                        </div>
+                                        <div class="number-txt">
+                                            Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
+                                            in porttitor.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="rs-addon-number">
+                                <div class="number-part">
+                                    <div class="number-image">
+                                        <img src="{% static 'assets/images/process/style1/4.png' %}" alt="Process">
+                                    </div>
+                                    <div class="number-text">
+                                        <div class="number-area"> <span class="number-prefix"> 4 </span></div>
+                                        <div class="number-title">
+                                            <h3 class="title">Deliver</h3>
+                                        </div>
+                                        <div class="number-txt">
+                                            Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
+                                            in porttitor.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Process Section End -->
+
+
+{% endblock %}

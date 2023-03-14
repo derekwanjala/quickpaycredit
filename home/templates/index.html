@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!-- Slider Start -->
+<div id="rs-slider" class="rs-slider slider3 rs-slider-style4 relative">
+    {% for rs in slider %}
+    <div class="bend niceties">
+        <div id="nivoSlider" class="slides">
+            <img src="{{ rs.image.url }}" alt="" title="#slide-1" />
+        </div>
+        <!-- Slide 1 -->
+        <div id="slide-1" class="slider-direction">
+            <div class="content-part text-center">
+                <div class="container">
+                    <div class="slider-des">
+                        <div class="sl-subtitle">{{ rs.subtitle }}</div>
+                        <h1 class="sl-title">{{ rs.hero_text }}</h1>
+                    </div>
+                    <ul class="slider-bottom">
+                        <li><a class="readon consultant orange-slide" href="contact.html">Get Started</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- Slider End -->
+
+<!-- Services Section Start -->
+<div id="rs-services" class="rs-services style6">
+    <div class="container custom">
+        <div class="rs-services style5 bg14 pt-95 pb-100 md-pt-65 md-pb-70">
+            <div class="row margin-0">
+                {% for rs in services %}
+                <div class="col-lg-4 col-md-6 mb-25">
+                   <div class="flip-box-inner">
+                        <div class="flip-box-wrap">
+                            <div class="front-part">
+                               <div class="front-content-part">
+                                    <div class="front-icon-part">
+                                        <div class="icon-part">
+                                            <img src="{{ rs.icon.url }}" alt="{{ rs.icon_alt }}"> 
+                                        </div>
+                                    </div>
+                                    <div class="front-title-part">
+                                        <h3 class="title"><a href="{{ rs.get_absolute_url }}">{{ rs.title }}</a></h3>
+                                    </div>
+                                    <div class="front-desc-part">
+                                        <p>{{ rs.short_detail }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-part">
+                                <div class="back-front-content">
+                                    <div class="back-title-part">
+                                        <h3 class="back-title"><a href="{{ rs.get_absolute_url }}">{{ rs.title }}</a></h3>
+                                    </div>
+                                    <div class="back-desc-part">
+                                        <p class="back-desc">{{ rs.short_detail }}</p>
+                                    </div>
+                                    <div class="back-btn-part">
+                                        <a class="readon view-more" href="{{ rs.get_absolute_url}}">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   </div> 
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services Section End -->
+
+{% endblock %}
