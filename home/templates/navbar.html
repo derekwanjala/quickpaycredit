@@ -12,8 +12,8 @@
                         <div class="header-logo">
                             <div class="logo-area">
                                 <a href="{% url 'home:home' %}">
-                                    <img class="normal-logo" src="{% static 'assets/images/quick-pay-credit-logo.jpg' %}" alt="Quick Pay Credit Limited Logo">  
-                                    <img class="sticky-logo" src="{% static 'assets/images/quick-pay-credit-logo.jpg' %}" alt="Quick Pay Credit Limited Logo">
+                                    <img class="normal-logo" src="{% static 'assets/images/quick-pay-credit-logo.jpg' %}" alt="QuickPay Credit Limited Logo">  
+                                    <img class="sticky-logo" src="{% static 'assets/images/quick-pay-credit-logo.jpg' %}" alt="QuickPay Credit Limited Logo">
                                 </a>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                     <div class="col-cell header-logo">                                  
                         <div class="logo-area">
                             <a href="{% url 'home:home' %}">
-                                <img src="{% static 'assets/images/quick-pay-credit-logo.jpg' %}" alt="Quick Pay Credit Limited Logo">  
+                                <img src="{% static 'assets/images/quick-pay-credit-logo.jpg' %}" alt="QuickPay Credit Limited Logo">  
                             </a>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                             <a href="{% url 'home:home' %}">Home</a></li>
                                         <li><a href="{% url 'about' %}">About</a></li>
                                         <li class="menu-item-has-children">
-                                            <a href="{% url 'quickpayloans' %}">Quick Pay Loans</a>
+                                            <a href="{% url 'quickpayloans' %}">QuickPay Loans</a>
                                             <ul class="sub-menu">
                                                 {% for rs in services %}
                                                 <li {% if service_detail.slug == rs.slug %} class="selected" {% endif %}><a href="{{ rs.get_absolute_url }}">{{ rs.title }}</a></li>
@@ -132,10 +132,10 @@
                 </a>
             </div>
             <div class="canvas-logo">
-                <a href="{% url 'home:home' %}"><img src="{% static 'assets/images/quick-pay-credit-logo.jpg' %}" alt="Quick Pay Credit Limited Logo"></a>
+                <a href="{% url 'home:home' %}"><img src="{% static 'assets/images/quick-pay-credit-logo.jpg' %}" alt="QuickPay Credit Limited Logo"></a>
             </div>
             <div class="offcanvas-text">
-                <p>Quick Payy Credit Limited - Your Guide To Financial Freedom</p>
+                <p>QuickPayy Credit Limited - Your Guide To Financial Freedom</p>
             </div>
             <div class="media-img">
                 <img src="{% static 'assets/images/off2.jpg' %}" alt="Images">
@@ -194,7 +194,7 @@
                     <a href="{% url 'home:home' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li class="menu-item-has-children">
-                    <a href="{% url 'quickpayloans' %}">Quick Pay Loans</a>
+                    <a href="{% url 'quickpayloans' %}">QuickPay Loans</a>
                     <ul class="sub-menu">
                         {% for rs in services %}
                         <li {% if service_detail.slug == rs.slug %} class="selected" {% endif %}><a href="{{ rs.get_absolute_url }}">{{ rs.title }}</a></li>
