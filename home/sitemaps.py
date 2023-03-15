@@ -12,6 +12,7 @@ class StaticViewSitemap(sitemaps.Sitemap):
             'home:home',
             'about',
             'quickpayloans',
+            'quickpayloans/<slug:slug>',
             'contact',
             'faq',
         ]
